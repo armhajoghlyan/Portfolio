@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Армен | Инфографика: Python Разработчик и AI Ассистент</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Palette: Energetic Blue & Amber
+         Primary Blue: #1E3A8A (blue-900)
+         Vibrant Amber: #F59E0B (amber-500)
+         Light Blue: #BFDBFE (blue-200)
+         Background: #F3F4F6 (gray-100)
+         Text: #1F2937 (gray-800)
+    -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#1E3A8A',
+                            accent: '#F59E0B',
+                            light: '#BFDBFE',
+                            bg: '#F3F4F6'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Chart Container Styling as per requirements */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px; /* Base height */
+            max-height: 400px;
+        }
+
+        /* Responsive height adjustments */
+        @media (max-width: 640px) {
+            .chart-container {
+                height: 300px;
+            }
+        }
+
+        /* Custom Scrollbar for a polished look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1E3A8A; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #1e40af; 
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans antialiased">
+
+    <!-- Navigation / Header -->
+    <header class="bg-brand-dark text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div>
+                <h1 class="text-2xl font-bold tracking-tight">АРМЕН</h1>
+                <p class="text-xs text-brand-accent uppercase tracking-widest font-semibold">Python Разработчик | AI Ассистент</p>
+            </div>
+            <!-- Contact information in the header -->
+            <div class="hidden md:flex text-sm opacity-90 items-center space-x-4">
+                <span class="flex items-center">📍 Ереван, Армения</span>
+                <span class="text-white/50">|</span>
+                <!-- Phone link (tel:) -->
+                <a href="tel:+37441775660" class="hover:text-brand-accent transition flex items-center gap-1">📞 +374 41 775-660</a>
+                <!-- Email link (mailto:) -->
+                <a href="mailto:armhajoghlyan@gmail.com" class="hover:text-brand-accent transition flex items-center gap-1">✉️ armhajoghlyan@gmail.com</a>
+                <a href="https://t.me/armhajoghlyan" target="_blank" class="hover:text-brand-accent transition flex items-center gap-1">💬 Telegram (@armhajoghlyan)</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8 space-y-12">
+
+        <!-- Section 1: Introduction & Hook -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white rounded-xl shadow-md p-8 overflow-hidden">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-brand-dark mb-4">Превращение Опыта в <span class="text-brand-accent">Код</span></h2>
+                <p class="text-lg leading-relaxed text-gray-600 mb-6">
+                    Я — разработчик, сосредоточенный на <strong>эффективности, надёжности и автоматизации</strong>. Перенося обширный профессиональный опыт в сферу IT, я предлагаю зрелый подход к решению проблем с помощью Python и Искусственного Интеллекта. Моя цель проста: обеспечить высокое качество для ваших задач по данным и автоматизации.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <div class="px-4 py-2 bg-brand-light text-brand-dark rounded-full font-semibold text-sm">Python Автоматизация</div>
+                    <div class="px-4 py-2 bg-brand-light text-brand-dark rounded-full font-semibold text-sm">Работа с Данными</div>
+                    <div class="px-4 py-2 bg-brand-light text-brand-dark rounded-full font-semibold text-sm">Интеграция AI</div>
+                </div>
+            </div>
+            <div class="flex flex-col justify-center items-center bg-brand-bg rounded-lg p-8 border-l-4 border-brand-accent h-full">
+                <span class="text-6xl font-black text-brand-dark">42</span>
+                <span class="text-xl font-bold text-gray-500 uppercase tracking-wide mt-2">Года Жизненного Опыта</span>
+                <p class="text-center text-sm text-gray-600 mt-4 max-w-xs">
+                    Обеспечение уровня <strong>ответственности</strong>, <strong>прозрачности</strong> и <strong>строгого соблюдения сроков</strong>, которые приходят только со зрелостью.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 2: Shareable Summary Card (Optimized for Social Media) -->
+        <section class="bg-brand-dark rounded-xl shadow-xl p-8">
+            <h3 class="text-2xl font-bold text-brand-accent mb-6 text-center">🚀 Ключевые Факты (Для Поделиться)</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-white">
+                <div class="flex items-center p-3 bg-gray-800 rounded-lg shadow-inner">
+                    <span class="text-brand-accent mr-3 text-xl">✅</span>
+                    <p><strong class="font-semibold">Главный Фокус:</strong> Python Автоматизация и Работа с Данными (60%)</p>
+                </div>
+                <div class="flex items-center p-3 bg-gray-800 rounded-lg shadow-inner">
+                    <span class="text-brand-accent mr-3 text-xl">🧠</span>
+                    <p><strong class="font-semibold">AI Опыт:</strong> Интеграция Gemini/OpenAI API (40%)</p>
+                </div>
+                <div class="flex items-center p-3 bg-gray-800 rounded-lg shadow-inner">
+                    <span class="text-brand-accent mr-3 text-xl">🛠️</span>
+                    <p><strong class="font-semibold">Ключевые Инструменты:</strong> Pandas, Selenium, Telegram API</p>
+                </div>
+                <div class="flex items-center p-3 bg-gray-800 rounded-lg shadow-inner">
+                    <span class="text-brand-accent mr-3 text-xl">⭐️</span>
+                    <p><strong class="font-semibold">Преимущество:</strong> Зрелый подход, надёжность и чёткие сроки.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Core Focus Areas (Charts) -->
+        <section>
+            <div class="mb-6 border-l-4 border-brand-dark pl-4">
+                <h3 class="text-2xl font-bold text-gray-800">Распределение Экспертизы</h3>
+                <p class="text-gray-600">Визуальный анализ основных услуг и баланса моих технических приоритетов.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Chart 1: Strategic Focus -->
+                <div class="bg-white rounded-xl shadow-md p-6 flex flex-col">
+                    <h4 class="text-lg font-semibold text-brand-dark mb-2">Стратегический Фокус</h4>
+                    <p class="text-sm text-gray-500 mb-4 h-10">Я балансирую надёжные задачи бэкенд-автоматизации с передовой AI-поддержкой и интеграцией моделей.</p>
+                    <div class="flex-grow flex items-center justify-center bg-gray-50 rounded-lg p-2">
+                        <div class="chart-container">
+                            <canvas id="focusChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chart 2: Service Competencies -->
+                <div class="bg-white rounded-xl shadow-md p-6 flex flex-col">
+                    <h4 class="text-lg font-semibold text-brand-dark mb-2">Уровень Компетенций</h4>
+                    <p class="text-sm text-gray-500 mb-4 h-10">Детальный взгляд на мою квалификацию в ключевых областях, востребованных клиентами.</p>
+                    <div class="flex-grow flex items-center justify-center bg-gray-50 rounded-lg p-2">
+                        <div class="chart-container">
+                            <canvas id="skillsChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: The Toolbox (Bubble Chart) -->
+        <section class="bg-brand-dark rounded-2xl shadow-xl p-8 text-white">
+            <div class="mb-8 text-center">
+                <h3 class="text-3xl font-bold text-brand-accent">Мой Технический Инструментарий</h3>
+                <p class="text-blue-200 mt-2 max-w-2xl mx-auto">
+                    Я использую современный набор библиотек и API для создания эффективных решений. График ниже визуализирует инструменты, которые я использую наиболее часто (Размер = Частота/Экспертиза).
+                </p>
+            </div>
+            
+            <div class="bg-white rounded-xl p-4 shadow-inner">
+                <div class="chart-container" style="max-width: 800px; height: 400px;">
+                    <canvas id="toolsChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Workflow & Approach -->
+        <section>
+            <div class="mb-8 text-center">
+                <h3 class="text-2xl font-bold text-gray-800">Мой Подход к Работе</h3>
+                <p class="text-gray-600 max-w-xl mx-auto">Мой подход призван обеспечить ваше спокойствие. Я отношусь к каждому фриланс-проекту с такой же строгостью, как к корпоративному контракту.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-brand-accent hover:-translate-y-1 transition-transform duration-300">
+                    <div class="text-4xl mb-4">🛡️</div>
+                    <h4 class="text-xl font-bold text-brand-dark mb-2">Надёжность Прежде Всего</h4>
+                    <p class="text-gray-600 text-sm">
+                        Сроки не обсуждаются. Я придерживаюсь чёткой, прозрачной коммуникации, чтобы вы всегда знали статус вашего проекта.
+                    </p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-brand-dark hover:-translate-y-1 transition-transform duration-300">
+                    <div class="text-4xl mb-4">⚡</div>
+                    <h4 class="text-xl font-bold text-brand-dark mb-2">Фокус на Автоматизации</h4>
+                    <p class="text-gray-600 text-sm">
+                        Я ищу наиболее эффективный способ решения проблемы, создавая чистые скрипты, которые автоматизируют рутинные задачи и экономят ваше время.
+                    </p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-brand-accent hover:-translate-y-1 transition-transform duration-300">
+                    <div class="text-4xl mb-4">🤖</div>
+                    <h4 class="text-xl font-bold text-brand-dark mb-2">Интеграция AI</h4>
+                    <p class="text-gray-600 text-sm">
+                        Использование API, таких как Gemini и OpenAI, для добавления интеллекта в процессы обработки данных и генерации контента.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer / Contact -->
+        <footer class="bg-gray-800 text-white rounded-xl p-8 text-center mt-12">
+            <h2 class="text-2xl font-bold mb-4">Готовы Оптимизировать Рабочий Процесс?</h2>
+            <p class="text-gray-400 mb-6">Я доступен для малых и средних проектов на Kwork.</p>
+            
+            <!-- Primary CTA - Kwork -->
+            <a href="https://kwork.ru/user/armhajoghlyan" target="_blank" class="mb-6 inline-block bg-brand-accent text-brand-dark font-bold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-400 transition cursor-pointer transform hover:scale-105">
+                Написать мне на Kwork
+            </a>
+
+            <!-- Secondary Contact Options -->
+            <div class="mt-8 flex flex-wrap justify-center gap-4 text-sm font-medium">
+                <!-- Email link (mailto:) -->
+                <a href="mailto:armhajoghlyan@gmail.com" class="flex items-center gap-2 text-white/80 hover:text-brand-accent transition bg-gray-700 p-2 rounded-lg" title="Email для деловых запросов">
+                    ✉️ armhajoghlyan@gmail.com
+                </a>
+                <a href="https://t.me/armhajoghlyan" target="_blank" class="flex items-center gap-2 text-white/80 hover:text-brand-accent transition bg-gray-700 p-2 rounded-lg" title="Telegram для быстрого общения">
+                    💬 @armhajoghlyan (Telegram)
+                </a>
+                <!-- Phone link (tel:) -->
+                <a href="tel:+37441775660" class="flex items-center gap-2 text-white/80 hover:text-brand-accent transition bg-gray-700 p-2 rounded-lg" title="Телефон для связи">
+                    📞 +374 41 775-660
+                </a>
+            </div>
+
+            <p class="text-xs text-gray-500 mt-8">© 2025 Armen. Все права защищены.</p>
+        </footer>
+
+    </main>
+
+    <script>
+        // --- UTILITY FUNCTIONS ---
+
+        /**
+         * Wraps long labels into an array of strings for Chart.js.
+         * @param {string} label - The original label.
+         * @param {number} maxLength - Max chars per line (default 16).
+         * @returns {string|string[]} - The processed label.
+         */
+        function wrapLabel(label, maxLength = 16) {
+            if (label.length <= maxLength) return label;
+            
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                if ((currentLine + " " + words[i]).length < maxLength) {
+                    currentLine += " " + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        /**
+         * Common tooltip configuration for multi-line support.
+         */
+        const commonTooltipOptions = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) {
+                        return label.join(' ');
+                    } else {
+                        return label;
+                    }
+                }
+            },
+            backgroundColor: 'rgba(31, 41, 55, 0.9)', // gray-800
+            titleFont: { size: 14, family: 'Inter' },
+            bodyFont: { size: 13, family: 'Inter' },
+            padding: 12,
+            cornerRadius: 8,
+            displayColors: true
+        };
+
+        // --- CHART 1: Focus Distribution (Doughnut) ---
+        const ctxFocus = document.getElementById('focusChart').getContext('2d');
+        const focusLabels = ["Скрипты Python для Автоматизации", "AI Подготовка Данных и Интеграция"];
+        // Process labels
+        const processedFocusLabels = focusLabels.map(l => wrapLabel(l, 20));
+
+        new Chart(ctxFocus, {
+            type: 'doughnut',
+            data: {
+                labels: processedFocusLabels,
+                datasets: [{
+                    data: [60, 40], // 60% Automation, 40% AI
+                    backgroundColor: [
+                        '#1E3A8A', // Brand Dark Blue
+                        '#F59E0B'  // Brand Accent Amber
+                    ],
+                    borderWidth: 0,
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            font: { family: 'Inter', size: 12 },
+                            usePointStyle: true,
+                            padding: 20
+                        }
+                    },
+                    tooltip: commonTooltipOptions
+                }
+            }
+        });
+
+        // --- CHART 2: Skills Competency (Horizontal Bar) ---
+        const ctxSkills = document.getElementById('skillsChart').getContext('2d');
+        const skillData = [
+            { label: "Веб-Скрапинг и Парсинг", value: 90 },
+            { label: "Обработка и Очистка Данных", value: 85 },
+            { label: "Разработка Telegram Ботов", value: 80 },
+            { label: "Интеграция AI Моделей", value: 75 },
+            { label: "Разметка Данных", value: 70 }
+        ];
+        
+        const processedSkillLabels = skillData.map(d => wrapLabel(d.label, 18));
+        const skillValues = skillData.map(d => d.value);
+
+        new Chart(ctxSkills, {
+            type: 'bar',
+            data: {
+                labels: processedSkillLabels,
+                datasets: [{
+                    label: 'Уровень Компетенций',
+                    data: skillValues,
+                    backgroundColor: '#1E3A8A', // Brand Dark
+                    borderRadius: 4,
+                    barPercentage: 0.6
+                }]
+            },
+            options: {
+                indexAxis: 'y', // Horizontal bar
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        max: 100,
+                        grid: { display: false },
+                        ticks: { display: false } // Hide numbers for cleaner look
+                    },
+                    y: {
+                        grid: { display: false },
+                        ticks: {
+                            font: { family: 'Inter', size: 11, weight: '600' },
+                            color: '#4B5563'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: commonTooltipOptions
+                }
+            }
+        });
+
+        // --- CHART 3: Tech Toolbox (Bubble Chart) ---
+        const ctxTools = document.getElementById('toolsChart').getContext('2d');
+        
+        // Data structure: x (Usage Frequency), y (Complexity/Importance), r (Proficiency/Focus)
+        const toolsData = [
+            { x: 9, y: 8, r: 18, label: "Python" },
+            { x: 8, y: 6, r: 15, label: "Pandas" },
+            { x: 7, y: 9, r: 14, label: "Gemini API" },
+            { x: 6, y: 5, r: 12, label: "Selenium" },
+            { x: 5, y: 7, r: 13, label: "Telegram API" },
+            { x: 4, y: 8, r: 12, label: "OpenAI API" },
+            { x: 3, y: 4, r: 10, label: "NumPy" },
+            { x: 2, y: 6, r: 9, label: "BeautifulSoup" }
+        ];
+
+        new Chart(ctxTools, {
+            type: 'bubble',
+            data: {
+                datasets: [{
+                    label: 'Tools',
+                    data: toolsData,
+                    backgroundColor: function(context) {
+                        // Alternate colors based on index
+                        const idx = context.dataIndex;
+                        return idx % 2 === 0 ? 'rgba(245, 158, 11, 0.8)' : 'rgba(30, 58, 138, 0.8)'; // Amber / Blue
+                    },
+                    borderColor: '#ffffff',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        display: false, // Hide axes for abstract look
+                        min: 0,
+                        max: 11
+                    },
+                    y: {
+                        display: false,
+                        min: 0,
+                        max: 11
+                    }
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                return tooltipItems[0].raw.label;
+                            },
+                            label: function(context) {
+                                return 'Уровень Фокуса: ' + context.raw.r;
+                            }
+                        },
+                        backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                        titleColor: '#1F2937',
+                        bodyColor: '#4B5563',
+                        padding: 10,
+                        borderColor: '#E5E7EB',
+                        borderWidth: 1
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
